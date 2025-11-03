@@ -1,0 +1,342 @@
+/*
+🎮 TRON AESTHETIC - Atlantis Pinball Leaderboard
+Cyan/Orange neon + Black background + 8-bit fusion + Modern polish
+*/
+
+:root {
+  /* Tron Colors */
+  --cyan: #00D9FF;
+  --orange: #FF9500;
+  --deep-black: #000000;
+  --dark-blue: #0A0E27;
+  --white: #FFFFFF;
+  
+  /* Medal Colors */
+  --gold: #FFD700;
+  --silver: #C0C0C0;
+  --bronze: #CD7F32;
+  --purple: #9D00FF;
+  
+  /* Fonts */
+  --font-primary: 'Orbitron', sans-serif;
+  --font-retro: 'Press Start 2P', cursive;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background: var(--deep-black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Neon glow effects */
+.neon-cyan {
+  color: var(--cyan);
+  text-shadow: 
+    0 0 5px var(--cyan),
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan),
+    0 0 40px var(--cyan);
+}
+
+.neon-orange {
+  color: var(--orange);
+  text-shadow: 
+    0 0 5px var(--orange),
+    0 0 10px var(--orange),
+    0 0 20px var(--orange),
+    0 0 40px var(--orange);
+}
+
+.neon-gold {
+  color: var(--gold);
+  text-shadow: 
+    0 0 5px var(--gold),
+    0 0 10px var(--gold),
+    0 0 20px var(--gold),
+    0 0 40px var(--gold);
+}
+
+/* Box glow effects */
+.glow-box-cyan {
+  border: 2px solid var(--cyan);
+  box-shadow:
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan),
+    0 0 30px var(--cyan),
+    inset 0 0 10px var(--cyan);
+}
+
+.glow-box-orange {
+  border: 2px solid var(--orange);
+  box-shadow:
+    0 0 10px var(--orange),
+    0 0 20px var(--orange),
+    0 0 30px var(--orange),
+    inset 0 0 10px var(--orange);
+}
+
+.glow-box-gold {
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 0 10px var(--gold),
+    0 0 20px var(--gold),
+    0 0 30px var(--gold),
+    inset 0 0 10px var(--gold);
+}
+
+/* Grid background pattern */
+.tron-grid {
+  background-image: 
+    linear-gradient(rgba(0, 217, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+/* Animated grid lines */
+.grid-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(0, 217, 255, 0.03) 50px,
+      rgba(0, 217, 255, 0.03) 51px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(0, 217, 255, 0.03) 50px,
+      rgba(0, 217, 255, 0.03) 51px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scanline effect (subtle CRT) */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.3;
+}
+
+/* Particle background */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--cyan);
+  animation: float 20s infinite linear;
+}
+
+/* Buttons - Tron style */
+.tron-button {
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tron-button:hover {
+  background: var(--cyan);
+  color: var(--deep-black);
+  box-shadow: 
+    0 0 20px var(--cyan),
+    0 0 40px var(--cyan);
+  transform: scale(1.05);
+}
+
+.tron-button:active {
+  transform: scale(0.98);
+}
+
+.tron-button-orange {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.tron-button-orange:hover {
+  background: var(--orange);
+  box-shadow: 
+    0 0 20px var(--orange),
+    0 0 40px var(--orange);
+}
+
+/* Input fields - Tron style */
+.tron-input {
+  background: rgba(0, 217, 255, 0.05);
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--font-primary);
+  font-size: 18px;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.tron-input:focus {
+  background: rgba(0, 217, 255, 0.1);
+  box-shadow: 
+    0 0 10px var(--cyan),
+    inset 0 0 5px var(--cyan);
+}
+
+.tron-input::placeholder {
+  color: rgba(0, 217, 255, 0.5);
+}
+
+/* Cards - Tron style */
+.tron-card {
+  background: linear-gradient(135deg, rgba(10, 14, 39, 0.9), rgba(0, 0, 0, 0.9));
+  border: 2px solid var(--cyan);
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 
+    0 0 20px rgba(0, 217, 255, 0.3),
+    inset 0 0 20px rgba(0, 217, 255, 0.1);
+}
+
+/* Glass morphism effect */
+.glass-panel {
+  background: rgba(10, 14, 39, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 217, 255, 0.05);
+}
+
+/* Typography */
+.title-main {
+  font-family: var(--font-primary);
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title-retro {
+  font-family: var(--font-retro);
+  text-transform: uppercase;
+}
+
+/* Rank badges */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-weight: 900;
+  padding: 8px 16px;
+  border-radius: 4px;
+  min-width: 60px;
+}
+
+.rank-1 {
+  background: linear-gradient(135deg, var(--gold), #FFA500);
+  color: var(--deep-black);
+  box-shadow: 0 0 20px var(--gold);
+  font-size: 24px;
+}
+
+.rank-2 {
+  background: linear-gradient(135deg, var(--silver), #A0A0A0);
+  color: var(--deep-black);
+  box-shadow: 0 0 20px var(--silver);
+  font-size: 20px;
+}
+
+.rank-3 {
+  background: linear-gradient(135deg, var(--bronze), #8B4513);
+  color: var(--white);
+  box-shadow: 0 0 20px var(--bronze);
+  font-size: 18px;
+}
+
+/* Score display */
+.score-large {
+  font-family: var(--font-primary);
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 2px;
+  color: var(--orange);
+  text-shadow: 
+    0 0 10px var(--orange),
+    0 0 20px var(--orange),
+    0 0 40px var(--orange);
+}
+
+/* Loading spinner - Tron style */
+.tron-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 217, 255, 0.2);
+  border-top: 3px solid var(--cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px var(--cyan);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+

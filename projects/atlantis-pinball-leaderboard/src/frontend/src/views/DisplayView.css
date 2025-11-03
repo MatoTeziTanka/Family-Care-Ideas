@@ -1,0 +1,99 @@
+.display-view {
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.display-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  overflow-y: auto;
+}
+
+/* Header */
+.display-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideInDown 1s ease-out;
+}
+
+.display-header .title-main {
+  font-size: 72px;
+  margin: 0;
+  letter-spacing: 12px;
+}
+
+.display-header .subtitle {
+  font-size: 48px;
+  margin: 10px 0;
+  letter-spacing: 8px;
+  font-weight: 700;
+}
+
+.display-header .subtitle-small {
+  font-size: 28px;
+  margin: 10px 0;
+  letter-spacing: 6px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Footer */
+.display-footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  animation: fadeIn 2s ease-in;
+}
+
+.display-footer p {
+  font-size: 16px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+/* Loading state */
+.display-view.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container {
+  text-align: center;
+  z-index: 10;
+}
+
+.loading-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive - Horizontal mode fallback */
+@media (orientation: landscape) and (max-height: 768px) {
+  .display-header .title-main {
+    font-size: 48px;
+  }
+  
+  .display-header .subtitle {
+    font-size: 32px;
+  }
+  
+  .display-header .subtitle-small {
+    font-size: 20px;
+  }
+  
+  .display-content {
+    padding: 20px;
+  }
+}
+

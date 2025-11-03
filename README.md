@@ -1,172 +1,110 @@
-# 🏥 Family Care Dashboard
+# 🏠 Family & Friends Projects
 
-**A free, self-hosted smart calendar display for families with elderly loved ones**
+**Open source projects built for family, friends, and community**
 
-> Help your grandparents stay organized. Large display, Google Calendar sync, privacy-first.
+> Self-hosted solutions that prioritize privacy, customization, and fun!
 
 ---
 
-## 🎯 **The Problem**
+## 📂 **Projects**
 
-Your parents or grandparents keep missing appointments. Smartphones are too small, paper calendars get out of date, and commercial solutions are expensive or invade privacy.
+### 🏥 [Family Care Dashboard](./projects/family-care-dashboard/)
+**Smart calendar display for families with elderly loved ones**
 
-## 💡 **Our Solution**
+- 📅 Google Calendar sync
+- 🗣️ Voice commands (Google Assistant)
+- 👴 Elder-friendly large display
+- 🔒 Privacy-first, self-hosted
+- 💰 Free and open source
 
-A self-hosted smart calendar that:
-- ✅ Displays on any TV (cast or HDMI)
-- ✅ Syncs automatically with Google Calendar
-- ✅ Works with Google Assistant voice commands
-- ✅ Shows large, clear, easy-to-read text
-- ✅ Is completely free and open source
-- ✅ Keeps your family's data private (self-hosted)
+**Status:** 🚧 In Development  
+**Get Started:** [Family Care Dashboard →](./projects/family-care-dashboard/)
+
+---
+
+### 🎮 [Atlantis Pinball Leaderboard](./projects/atlantis-pinball-leaderboard/)
+**Tron-themed digital leaderboard for 1975 Gottlieb Atlantis pinball machine**
+
+- 🎨 Retro Tron aesthetic (cyan/orange neon)
+- ⚡ Real-time score updates (WebSocket)
+- 📱 Multiple input methods (mobile, voice, SMS)
+- 🖥️ Vertical display (arcade cabinet style)
+- 🏆 Tracks 25+ players
+
+**Status:** ✅ Production Ready  
+**Get Started:** [Atlantis Pinball Leaderboard →](./projects/atlantis-pinball-leaderboard/)
+
+---
+
+## 🎯 **Philosophy**
+
+These projects are built around core principles:
+
+- **🔒 Privacy First** - Your data stays with you (self-hosted)
+- **💰 Free Forever** - No subscriptions or hidden costs
+- **🛠️ Customizable** - Modify to fit your needs
+- **👥 Community-Driven** - Built by families, for families
+- **🎨 Quality Design** - Looks as good as it functions
 
 ---
 
 ## 🚀 **Quick Start**
 
-### **Option 1: MagicMirror² (Easiest)**
-```bash
-# Clone and run with Docker
-git clone https://github.com/MatoTeziTanka/Family-Care-Ideas
-cd Family-Care-Ideas/deployment
-docker-compose up -d
-```
+Each project has its own complete documentation:
 
-Access at: `http://localhost:8080`
-
-### **Option 2: Custom Dashboard (Most Flexible)**
-Coming soon - full React dashboard with custom features
-
----
-
-## ✨ **Features**
-
-- 📅 **Google Calendar Integration** - Automatic sync, always up-to-date
-- 🗣️ **Voice Commands** - Works with Google Assistant/Nest
-- 👴 **Elder-Friendly** - Large text, high contrast, simple interface
-- 🌤️ **Weather Display** - Know what to expect each day
-- 📸 **Photo Slideshow** - Display family photos
-- 🔒 **Privacy-First** - Self-hosted, no data sharing
-- 💰 **Free Forever** - No subscriptions, no hidden costs
-
----
-
-## 🖥️ **Display Options**
-
-| Method | Cost | Setup | Best For |
-|--------|------|-------|----------|
-| **Laptop → HDMI → TV** | $0 | 5 min | Testing/temporary |
-| **Raspberry Pi** | ~$60 | 1 hour | Permanent, dedicated |
-| **Cast to TV** | $20-30 | 10 min | Wireless, flexible |
-| **Server + Browser** | $0 | 30 min | Using existing hardware |
-
----
-
-## 📖 **Documentation**
-
-- **[Technical Handover](./docs/TECHNICAL-HANDOVER.md)** - Complete technical documentation
-- **[Marketing Strategy](./docs/MARKETING-HANDOVER.md)** - Launch and growth plan
-- **[Development Chat Starter](./docs/CHAT-STARTER-DEVELOPMENT.md)** - Start building
-- **[Marketing Chat Starter](./docs/CHAT-STARTER-MARKETING.md)** - Launch strategy
-
----
-
-## 🎯 **Who Is This For?**
-
-### **Adult Children (30-60)**
-Help your parents stay organized without being there physically.
-
-### **Tech-Savvy Seniors (60-75)**
-Take control of your schedule with a simple, clear display.
-
-### **Professional Caregivers**
-Coordinate care for multiple clients affordably and securely.
-
----
-
-## 🆚 **How We Compare**
-
-| Feature | Family Care | Mango Display | DAKboard | Google Nest Hub |
-|---------|-------------|---------------|----------|-----------------|
-| **Price** | Free | $5-15/mo | $5-9/mo | $99 device |
-| **Privacy** | Self-hosted | Cloud | Cloud | Cloud (Google) |
-| **Screen Size** | Any TV | Any | Any | 7-10" only |
-| **Customization** | Full | Limited | Medium | None |
-| **Open Source** | Yes | No | No | No |
-
----
-
-## 🛠️ **Architecture Options**
-
-### **MagicMirror² (Recommended for MVP)**
-- Mature, stable, large community
-- Pre-built modules for calendar, weather, photos
-- Quick setup (2-4 hours)
-
-### **Custom React Dashboard (Future)**
-- Complete customization
-- Modern tech stack
-- Integrated with other services
-- Development time: 8-12 hours
-
----
-
-## 🚀 **Roadmap**
-
-### **Phase 1: MVP (Week 1)**
-- [x] Repository setup
-- [ ] MagicMirror² deployment
-- [ ] Google Calendar integration
-- [ ] Basic display working
-
-### **Phase 2: Enhanced (Weeks 2-4)**
-- [ ] Google Tasks integration
-- [ ] Weather and photos
-- [ ] Elder-friendly UI refinements
-- [ ] Raspberry Pi setup guide
-
-### **Phase 3: Advanced (Months 2-3)**
-- [ ] Medication reminders
-- [ ] Family communication board
-- [ ] Voice integration improvements
-- [ ] Mobile app companion
+1. Choose a project from the list above
+2. Follow the project's README for setup instructions
+3. Most projects have one-command Docker deployment
+4. Customize to your needs
 
 ---
 
 ## 🤝 **Contributing**
 
-This project is built by families, for families. We welcome:
-- Bug reports and feature requests
-- Code contributions (PRs)
-- Documentation improvements
-- User testimonials and feedback
+We welcome contributions from the community!
+
+- 🐛 **Bug Reports** - Open an issue with details
+- 💡 **Feature Requests** - Share your ideas
+- 🔧 **Code Contributions** - Submit a pull request
+- 📖 **Documentation** - Help improve our guides
+- 💬 **Testimonials** - Share your success stories
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📸 **Screenshots**
+## 🛠️ **Tech Stack**
 
-*Coming soon - deploying to real grandparents this week!*
+Our projects use modern, reliable technologies:
+
+- **Frontend:** React, Vite, modern CSS
+- **Backend:** FastAPI (Python), Node.js
+- **Database:** SQLite, PostgreSQL
+- **Deployment:** Docker, Docker Compose
+- **Real-time:** WebSocket, Server-Sent Events
 
 ---
 
-## 📝 **License**
+## 📄 **License**
 
 Apache License 2.0 - See [LICENSE](./LICENSE) for details.
 
-Free to use, modify, and distribute. Built with ❤️ for families.
+All projects are free to use, modify, and distribute.
 
 ---
 
-## 🙏 **Acknowledgments**
+## 🙏 **About**
 
-Inspired by:
-- [Mango Display](https://mangodisplay.com/) - Great product, but we wanted self-hosted
-- [MagicMirror²](https://magicmirror.builders/) - Excellent open source foundation
-- [DAKboard](https://dakboard.com/) - Pioneer in digital calendar displays
+These projects are developed through collaboration between:
+- **Seth Schultz** - Marine Corps Veteran
+- **LightSpeedUp Hosting** - Privacy-focused hosting
+- **Community Contributors** - Families helping families
 
-Built with love for families who need help staying organized.
+Built with ❤️ for people who value:
+- Privacy over profit
+- Community over corporations  
+- Quality over quantity
+- Family over everything
 
 ---
 
@@ -174,22 +112,40 @@ Built with love for families who need help staying organized.
 
 - **Issues:** [GitHub Issues](https://github.com/MatoTeziTanka/Family-Care-Ideas/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/MatoTeziTanka/Family-Care-Ideas/discussions)
-- **Documentation:** [docs/](./docs/)
+- **Email:** For private inquiries, see individual project docs
 
 ---
 
 ## ⭐ **Show Your Support**
 
-If this helps your family, please:
-- ⭐ Star this repository
-- 📢 Share with others who might benefit
-- 💬 Leave feedback or testimonial
-- 🤝 Contribute improvements
+If these projects help you or your family:
+
+- ⭐ **Star this repository**
+- 📢 **Share with others** who might benefit
+- 💬 **Leave feedback** or testimonials
+- 🤝 **Contribute** improvements or new projects
 
 ---
 
-**Built by Seth Schultz**  
-*Marine Corps Veteran | LightSpeedUp Hosting*  
-*Helping families stay connected, one calendar at a time* 🦅
+## 🗺️ **Roadmap**
 
+### Current Projects
+- ✅ Atlantis Pinball Leaderboard (Complete)
+- 🚧 Family Care Dashboard (In Progress)
 
+### Future Projects
+- 📊 Home Server Dashboard
+- 🎵 Music Server Interface
+- 📸 Family Photo Gallery
+- 🎯 More community-requested projects
+
+---
+
+**Built by families, for families. Privacy-first. Always free. Always open source.** 🦅
+
+*Marine Corps Values: Honor, Courage, Commitment*
+
+---
+
+**Last Updated:** November 3, 2025  
+**Projects:** 2 active, more coming soon!

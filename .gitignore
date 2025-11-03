@@ -1,0 +1,102 @@
+# Family & Friends Projects - Git Ignore
+
+# =============================================================================
+# SENSITIVE DATA - NEVER COMMIT
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.crt
+*.p12
+*_rsa
+*_rsa.pub
+secrets/
+credentials/
+config/secrets.json
+
+# Passwords, API Keys, Tokens
+*password*
+*secret*
+*token*
+*api_key*
+*.credentials
+
+# Database files (may contain personal data)
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =============================================================================
+# BUILD OUTPUTS
+# =============================================================================
+dist/
+build/
+*.egg-info/
+.eggs/
+coverage/
+.coverage
+htmlcov/
+
+# =============================================================================
+# IDE & EDITOR FILES
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# LOGS
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+*.env.production
+docker-compose.override.yml
+
+# =============================================================================
+# TEMPORARY FILES
+# =============================================================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+# Atlantis Pinball
+projects/atlantis-pinball-leaderboard/data/*.db
+projects/atlantis-pinball-leaderboard/data/*.backup.db
+
+# Family Care Dashboard
+projects/family-care-dashboard/config/calendar_credentials.json
+projects/family-care-dashboard/tokens/
+

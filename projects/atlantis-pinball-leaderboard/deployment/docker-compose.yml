@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  # Backend API
+  backend:
+    build:
+      context: ../src/backend
+      dockerfile: ../../deployment/Dockerfile.backend
+    container_name: atlantis-pinball-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+      - ../src/backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///data/atlantis_pinball.db
+      - CORS_ORIGINS=*
+    restart: unless-stopped
+    networks:
+      - pinball-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Frontend React App
+  frontend:
+    build:
+      context: ../src/frontend
+      dockerfile: ../../deployment/Dockerfile.frontend
+    container_name: atlantis-pinball-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - pinball-network
+    environment:
+      - VITE_API_URL=http://localhost:8000
+
+  # Nginx Reverse Proxy (Production)
+  nginx:
+    image: nginx:alpine
+    container_name: atlantis-pinball-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - backend
+      - frontend
+    restart: unless-stopped
+    networks:
+      - pinball-network
+
+networks:
+  pinball-network:
+    driver: bridge
+
+volumes:
+  data:
+

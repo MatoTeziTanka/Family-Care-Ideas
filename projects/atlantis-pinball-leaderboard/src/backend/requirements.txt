@@ -1,0 +1,28 @@
+# Atlantis Pinball Leaderboard - Backend Dependencies
+
+# FastAPI Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database
+databases[sqlite]==0.8.0
+sqlalchemy==2.0.23
+aiosqlite==0.19.0
+
+# WebSocket support
+websockets==12.0
+
+# Data validation
+pydantic==2.5.0
+
+# CORS and middleware
+python-multipart==0.0.6
+
+# Optional: PostgreSQL support (for production)
+# psycopg2-binary==2.9.9
+# asyncpg==0.29.0
+
+# Optional: Voice assistant integration (Phase 2)
+# twilio==8.10.0  # SMS
+# flask-ask-sdk==1.0.0  # Alexa
+
