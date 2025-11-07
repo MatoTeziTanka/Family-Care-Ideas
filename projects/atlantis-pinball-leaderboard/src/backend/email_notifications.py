@@ -246,3 +246,5 @@ def get_notifier() -> EmailNotifier:
         _notifier = EmailNotifier()
     return _notifier
 
+
+
