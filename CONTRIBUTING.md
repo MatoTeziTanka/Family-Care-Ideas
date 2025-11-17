@@ -1,252 +1,77 @@
-# 🤝 Contributing to Family Care Dashboard
+# Contributing to [Project Name]
 
-Thank you for considering contributing to Family Care Dashboard! This project helps families with elderly loved ones stay organized, and your contributions make a real difference.
+Thank you for considering contributing to [Project Name]! Your contributions are highly valued and help make this project even better.
 
----
+This document outlines the guidelines for contributing to this repository. Please take a moment to review this document before submitting your contributions.
 
-## 🎯 **How You Can Help**
+## 💡 How to Contribute
 
-### **1. Use It and Share Feedback**
-- Deploy it for your own family
-- Share your experience (good and bad)
-- Submit feature requests
-- Report bugs
+There are several ways you can contribute to this project:
 
-### **2. Improve Documentation**
-- Fix typos or unclear instructions
-- Add setup guides for different platforms
-- Translate documentation
-- Create video tutorials
+*   **Report Bugs:** If you find a bug, please open an [issue](.github/ISSUE_TEMPLATE/bug_report.md) describing the problem, including steps to reproduce it and screenshots if applicable.
+*   **Suggest Features:** Have an idea for a new feature? Open an [issue](.github/ISSUE_TEMPLATE/feature_request.md) to propose your idea.
+*   **Improve Documentation:** Found an error in the documentation or have a suggestion for improvement? Open a [documentation issue](.github/ISSUE_TEMPLATE/documentation.md) or submit a pull request.
+*   **Submit Code:** If you want to contribute code, please follow the guidelines below.
 
-### **3. Write Code**
-- Fix bugs
-- Add new features
-- Improve performance
-- Enhance UI/UX
+## 📋 General Guidelines
 
-### **4. Share Your Story**
-- Write about your experience
-- Share photos (with permission)
-- Create testimonials
-- Help market to families who need it
+*   **Be Respectful:** All interactions in this project should adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
+*   **One Feature/Fix Per Pull Request:** Each pull request should address a single feature or bug fix. This makes reviewing easier.
+*   **Keep it Small:** Try to keep your pull requests as small and focused as possible. Smaller PRs are easier to review.
+*   **Write Tests:** Always include tests that cover your changes. If you're adding a new feature, write unit and/or integration tests. If you're fixing a bug, add a regression test.
+*   **Update Documentation:** If your changes affect the documentation (e.g., new features, changed APIs), please update the relevant documentation files.
 
----
+## 💻 Code Contribution Guidelines
 
-## 🚀 **Getting Started**
+### Branching Model
 
-### **1. Fork the Repository**
-```bash
-# Click "Fork" on GitHub, then:
-git clone https://github.com/YOUR_USERNAME/Family-Care-Ideas
-cd Family-Care-Ideas
+We use a branching model based on `main` and feature branches:
+
+1.  **`main` Branch:** This branch always contains the latest stable and released code. Direct commits to `main` are not allowed.
+2.  **Feature Branches:** For every new feature or bug fix, create a new branch from `main`. Name your branches descriptively (e.g., `feature/add-user-auth`, `bugfix/fix-login-issue`).
+
+### Setting up Your Development Environment
+
+Refer to the [README.md](README.md) for instructions on how to set up your local development environment.
+
+### Code Style
+
+*   **Formatting:** We use [Prettier](https://prettier.io/) (or [Black](https://github.com/psf/black) for Python) for automatic code formatting. Please ensure your code is formatted correctly before submitting a pull request.
+*   **Linting:** We use [ESLint](https://eslint.org/) (or [Flake8](https://flake8.pycqa.org/en/latest/) for Python) to enforce code quality and style. Address all linter warnings and errors.
+
+### Commit Messages
+
+We follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/). Please ensure your commit messages adhere to this standard. Good commit messages make it easier to understand the project's history and generate changelogs.
+
+Examples of good commit messages:
+
+*   `feat: Add user authentication module`
+*   `fix(auth): Correct login redirect after successful authentication`
+*   `docs: Update README with installation instructions`
+*   `refactor(api): Streamline user controller logic`
+
+### Pull Request Process
+
+1.  **Fork the Repository:** Fork the `[Project Name]` repository to your GitHub account.
+2.  **Clone Your Fork:** Clone your forked repository to your local machine.
+3.  **Create a New Branch:** Create a new branch from `main` for your changes.
+4.  **Make Your Changes:** Implement your feature or bug fix, writing tests and updating documentation as needed.
+5.  **Commit Your Changes:** Commit your changes using [Conventional Commit messages](#commit-messages).
+6.  **Push to Your Fork:** Push your new branch to your forked repository on GitHub.
+7.  **Open a Pull Request:** Go to the original `[Project Name]` repository on GitHub and open a new Pull Request from your branch to the `main` branch. Fill out the [Pull Request template](.github/PULL_REQUEST_TEMPLATE.md) thoroughly.
+8.  **Address Feedback:** Respond to any feedback or review comments. Make necessary changes and push new commits to your branch.
+9.  **Merge:** Once your pull request has been reviewed and approved, it will be merged into `main`.
+
+## ✅ Todo Comments
+
+We use `TODO` comments to mark future work, known issues, or areas for improvement within the codebase. Please use the following format:
+
+```
+// TODO (YYYY-MM-DD): [Description of task] - [Your Initials]
+// Example: // TODO (2025-11-17): Implement user authentication flow - MT
+
+// TODO (#ISSUE_NUMBER): [Description of task]
+// Example: // TODO (#123): Refactor data parsing for performance
 ```
 
-### **2. Create a Branch**
-```bash
-git checkout -b feature/your-feature-name
-# or
-git checkout -b fix/your-bug-fix
-```
-
-### **3. Make Changes**
-- Follow existing code style
-- Add comments where helpful
-- Update documentation if needed
-
-### **4. Test Your Changes**
-- Test locally before submitting
-- Verify it works for your target audience (seniors!)
-- Check on different screen sizes
-
-### **5. Submit Pull Request**
-```bash
-git add .
-git commit -m "feat: Add your feature description"
-git push origin feature/your-feature-name
-```
-
-Then open a Pull Request on GitHub with:
-- Clear description of changes
-- Why the change is needed
-- How you tested it
-- Screenshots (if UI changes)
-
----
-
-## 📝 **Coding Guidelines**
-
-### **General Principles**
-- **Simplicity First** - Seniors use this, keep it simple
-- **Readability** - Others will maintain this code
-- **Accessibility** - High contrast, large text, clear UI
-- **Performance** - Should run on Raspberry Pi
-
-### **Code Style**
-- Use descriptive variable names
-- Add comments for complex logic
-- Follow existing patterns in the codebase
-- Keep functions small and focused
-
-### **Commit Messages**
-```
-feat: Add medication reminder feature
-fix: Correct calendar sync bug
-docs: Update setup guide for Raspberry Pi
-style: Improve button contrast for visibility
-```
-
----
-
-## 🐛 **Reporting Bugs**
-
-### **Before Submitting**
-1. Check if it's already reported in Issues
-2. Make sure you're using the latest version
-3. Test on a clean install if possible
-
-### **Bug Report Template**
-```markdown
-**Describe the bug**
-Clear description of what went wrong
-
-**To Reproduce**
-1. Go to '...'
-2. Click on '...'
-3. See error
-
-**Expected behavior**
-What you expected to happen
-
-**Screenshots**
-If applicable, add screenshots
-
-**Environment**
-- Device: [Raspberry Pi 4 / Dell Server / etc.]
-- OS: [Ubuntu 24.04 / Raspbian / etc.]
-- Browser: [Chrome 120 / Safari 17 / etc.]
-- Version: [commit hash or version number]
-
-**Additional context**
-Any other relevant information
-```
-
----
-
-## ✨ **Feature Requests**
-
-### **Feature Request Template**
-```markdown
-**Is your feature request related to a problem?**
-Clear description of the problem
-
-**Describe the solution you'd like**
-What you want to happen
-
-**Describe alternatives you've considered**
-Other solutions you thought about
-
-**Who would benefit?**
-Which users would find this helpful?
-
-**Additional context**
-Screenshots, mockups, examples
-```
-
----
-
-## 🎨 **Design Guidelines**
-
-### **UI/UX Principles**
-- **Large Text** - Minimum 24px, prefer 36px+
-- **High Contrast** - Dark text on light, light text on dark
-- **Simple Layout** - No clutter, clear hierarchy
-- **Touch-Friendly** - Large buttons (min 44x44px)
-- **Color Blind Safe** - Don't rely only on color
-
-### **Accessibility**
-- Use semantic HTML
-- Add ARIA labels where needed
-- Keyboard navigation support
-- Screen reader friendly
-
----
-
-## 🧪 **Testing**
-
-### **Before Submitting PR**
-- [ ] Code runs without errors
-- [ ] UI looks good on large TV screen
-- [ ] Text is readable from 10 feet away
-- [ ] Works on target device (Pi/Server)
-- [ ] No console errors
-- [ ] Documentation updated if needed
-
-### **Elder-Friendly Testing**
-If possible, test with an actual senior:
-- Can they read everything easily?
-- Is anything confusing?
-- Do they understand how to use it?
-- Is anything too small or hard to see?
-
----
-
-## 📚 **Documentation**
-
-### **What to Document**
-- New features (how to use them)
-- Configuration options (what they do)
-- Setup steps (be detailed)
-- Troubleshooting (common issues)
-
-### **Documentation Style**
-- Write for non-technical users
-- Use screenshots generously
-- Provide step-by-step instructions
-- Include "Why" not just "How"
-
----
-
-## 🤔 **Questions?**
-
-- **General Questions:** [GitHub Discussions](https://github.com/MatoTeziTanka/Family-Care-Ideas/discussions)
-- **Bug Reports:** [GitHub Issues](https://github.com/MatoTeziTanka/Family-Care-Ideas/issues)
-- **Feature Requests:** [GitHub Issues](https://github.com/MatoTeziTanka/Family-Care-Ideas/issues)
-
----
-
-## 📜 **Code of Conduct**
-
-### **Our Pledge**
-We are building something to help families. Be kind, respectful, and helpful.
-
-### **Our Standards**
-- ✅ Patient with questions (remember, this is for seniors)
-- ✅ Respectful of all contributors
-- ✅ Constructive feedback
-- ✅ Focus on what's best for users (families)
-- ❌ No trolling, harassment, or disrespect
-
----
-
-## 🎖️ **Recognition**
-
-Contributors will be:
-- Listed in project README
-- Acknowledged in release notes
-- Appreciated deeply by families you help
-
----
-
-## 📄 **License**
-
-By contributing, you agree that your contributions will be licensed under the Apache License 2.0.
-
----
-
-**Thank you for helping families stay organized!** 🏥💚
-
-*Every contribution, no matter how small, makes a difference in someone's life.*
-
-
-
-
+This helps us track and manage pending tasks effectively.
